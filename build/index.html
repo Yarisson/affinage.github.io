@@ -1,0 +1,306 @@
+<!DOCTYPE html><html lang="ru"><head><meta charset="utf-8"><title>pink donut</title><meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no"><link href="css/style.css" type="text/css" rel="stylesheet"><link rel="preload" href="fonts/OpenSans-Regular.ttf" as="font"><link rel="preload" href="fonts/OpenSans-Light.ttf" as="font"><link rel="preload" href="fonts/BIG-JOHN.otf" as="font"><script src="https://cdn.jsdelivr.net/npm/vue@2.6.10/dist/vue.js"></script></head><body><div class="container"><header class="page-header"><div class="page-header__wrapper"><div class="bullets"><button class="bullets__button bullets__button--active"></button> <button class="bullets__button"></button> <button class="bullets__button"></button></div><app-mainnav class="mainMav-component"></app-mainnav><div class="page-header__content header-content"><h1 class="header-content__title">Tacos cardigan<br>truffaut Quanted!</h1><a class="header-content__link" href="#">See more</a></div></div></header><main class="page-main"><app-whatdo class="whatDo-component"></app-whatdo><app-myworks class="myWorks-component"></app-myworks><app-about class="about-component"></app-about></main><footer class="page-footer"><div class="popup popup--hidden"><h3 class="popup__title">Сообщение отправлено!</h3><p class="popup__text"></p><div class="popup__button-wrapper"><button class="popup__button"></button></div></div><app-formfooter class="footer-component"></app-formfooter><section class="footer-contacts"><h2 class="footer-contacts__title">Contact</h2><div class="social-links"><a href="#" class="social-links__item social-links__item--facebook"></a> <a href="#" class="social-links__item social-links__item--twitter"></a> <a href="#" class="social-links__item social-links__item--google"></a> <a href="" class="social-links__item social-links__item--pinterest"></a> <a href="" class="social-links__item social-links__item--instagram"></a></div><div class="contacts" id="contact"><ul class="contacts__list"><li class="contacts__item contacts__item--adress"><h4 class="contacts__title">Adress</h4><p class="contacts__text">9114 Bridge Street , Hillsboro, OR 97124</p></li><li class="contacts__item contacts__item--phone"><h4 class="contacts__title">Phone</h4><p class="contacts__text">+48 202 - 555 - 0114</p></li><li class="contacts__item contacts__item--email"><h4 class="contacts__title">Email</h4><p class="contacts__text">contact@yoursite.com</p></li></ul></div></section><app-mainnavfooter class="mainMavFooter-component"></app-mainnavfooter></footer></div><script>var mainNav = new Vue({
+        el: '.mainMav-component',
+        template: `
+        <nav class="main-nav">
+
+            <div class="main-nav__wrapper">
+              <ul class="main-nav__list">
+                <li class="main-nav__item main-nav__item--current">
+                  <a class="main-nav__link main-nav__link--current" href="#">Home</a>
+                </li>
+  
+                <li class="main-nav__item">
+                  <a class="main-nav__link" href="#what-do">What i do</a>
+                </li>
+  
+                <li class="main-nav__item">
+                  <a class="main-nav__link" href="#my-works">My works</a>
+                </li>
+  
+                <li class="main-nav__item">
+                  <a class="main-nav__link" href="#about">About</a>
+                </li>
+  
+                <li class="main-nav__item">
+                  <a class="main-nav__link" href="#contact">Contact</a>
+                </li>
+              </ul>
+            </div>
+  
+          </nav>   
+        `,
+        data: {
+        }
+      });
+
+      var mainNavFooter = new Vue({
+        el: '.mainMavFooter-component',
+        template: `
+        <nav class="main-nav main-nav--footer">
+
+            <div class="main-nav__wrapper main-nav__wrapper--footer">
+              <ul class="main-nav__list main-nav__list--footer">
+                <li class="main-nav__item main-nav__item--footer">
+                  <a class="main-nav__link" href="#">Home</a>
+                </li>
+    
+                <li class="main-nav__item main-nav__item--footer">
+                  <a class="main-nav__link" href="#what-do">What i do</a>
+                </li>
+    
+                <li class="main-nav__item main-nav__item--footer">
+                  <a class="main-nav__link" href="#my-works">My works</a>
+                </li>
+    
+                <li class="main-nav__item main-nav__item--footer">
+                  <a class="main-nav__link" href="#about">About</a>
+                </li>
+    
+                <li class="main-nav__item main-nav__item--footer main-nav__item--current">
+                  <a class="main-nav__link main-nav__link--current main-nav__link--current-footer" href="#contact">Contact</a>
+                </li>
+              </ul>
+            </div>
+          </nav>
+        `,
+        data: {
+        }
+      });
+
+      var formFooter = new Vue({
+        el: '.footer-component',
+        template: `
+        <form action="http://httpbin.org/post" method="post" class="form-footer">
+
+            <section class="form-footer__wrapper">
+    
+              <label for="name" class="form-footer__label">Name:</label>
+              <input id="name" type="text" class="form-footer__input">
+    
+              <label for="email" class="form-footer__label">Email:</label>
+              <input id="email" type="email" class="form-footer__input">
+    
+              <label for="textarea" class="form-footer__label">Message:</label>
+              <textarea name="textarea" id="textarea" cols="30" rows="10" class="form-footer__textarea">
+    
+              </textarea>
+    
+              <button class="form-footer__button">Send</button>
+    
+    
+            </section>
+    
+          </form>      
+        `,
+        data: {
+          Name: '',
+          PopupShow: false
+        },
+        computed: {
+          popupHidden() {
+            return PopupShow = false;
+          },
+          popup() {
+            return PopupShow = true;
+          }
+        }
+      });
+
+      var whatDo = new Vue({
+        el: '.whatDo-component',
+        template: `
+        <section class="what-do what-do--tablet" id="what-do">
+
+            <div class="what-do__title-wrapper">
+    
+              <h2 class="what-do__title">What i do</h2>
+    
+            </div>
+    
+            <div class="what-do__text-wrapper">
+    
+              <p class="what-do__text">Fingerstache green juice semiotics quinoa, truffaut letterpress
+                wolf photo booth ugh biodiesel mumblecore brunch. Meh austin vinyl
+                banh mi, gluten-free chillwave scenester kombucha street art. Before
+                they sold out lumbersexual chillwave, cold-pressed mumblecore beard
+                pickled letterpress normcore crucifix.</p>
+    
+            </div>
+    
+            <div class="what-do__list-wrapper">
+    
+              <ul class="what-do__list">
+    
+                <li class="what-do__item what-do__item--headphones">
+                  <input class="what-do__tabs-input" type="radio" name="tabs-what" id="what-1">
+                  <label class="what-do__tabs-label what-do__tabs-label--1" for="what-1"></label>
+                  <article class="what-do__item-content what-do__item-content--headphones">
+                    <h3 class="what-do__item-caption">Ultricies</h3>
+                    <p class="what-do__item-text">
+                      Four dollar toast messenger bag green juice, organic cliche tofu synth
+                      small batch locavore austin. Squid mlkshk authe ntic pinterest, pour-over
+                      gastropub XOXO seitan sartorial humblebrag.
+                    </p>
+                  </article>
+                </li>
+    
+                <li class="what-do__item what-do__item--screen">
+                  <input class="what-do__tabs-input" type="radio" name="tabs-what" id="what-2">
+                  <label class="what-do__tabs-label what-do__tabs-label--2" for="what-2"></label>
+                  <article class="what-do__item-content what-do__item-content--screen">
+                    <h3 class="what-do__item-caption">Porttitor</h3>
+                    <p class="what-do__item-text">
+                      Tofu mixtape selfies, swag brooklyn banh mi stumptown loca vore yr migas
+                      tousled chicharrones sriracha cray leggings. Street art tousled kale chips
+                      poutine schlitz. Pitchfork distillery next level, polaroid roof party austin.
+                    </p>
+                  </article>
+                </li>
+    
+                <li class="what-do__item what-do__item--camera">
+                  <input class="what-do__tabs-input" type="radio" name="tabs-what" id="what-3">
+                  <label class="what-do__tabs-label what-do__tabs-label--3" for="what-3"></label>
+                  <article class="what-do__item-content what-do__item-content--camera">
+                    <h3 class="what-do__item-caption">Curabitur</h3>
+                    <p class="what-do__item-text">
+                      Dreamcatcher deep v austin schlitz drinking vinegar, messen ger bag slow-carb.
+                      Migas tumblr kombucha you probably hav en't heard of them +1 chicharrones.
+                      Tilde wayfarers craft beer stumptown, humblebrag ugh whatever.
+                    </p>
+                  </article>
+                </li>
+    
+              </ul>
+    
+            </div>
+    
+          </section>      
+        `,
+        data: {
+        }
+      });
+
+      var myWorks = new Vue({
+        el: '.myWorks-component',
+        template: `
+        <section class="my-works" id="my-works">
+
+            <h2 class="my-works__title">My works</h2>
+    
+            <div class="my-works__slider">
+              <img src="img/picture1.jpg" alt="картинка для слайдера" class="my-works__slider-picture">
+              <img src="img/picture2.jpg" alt="картинка для слайдера" class="my-works__slider-picture">
+              <img src="img/picture3.jpg" alt="картинка для слайдера" class="my-works__slider-picture">
+              <img src="img/picture4.jpg" alt="картинка для слайдера" class="my-works__slider-picture">
+            </div>
+  
+            <button class="my-works__button-left"></button>
+            <button class="my-works__button-right"></button>
+
+            <ul class="my-works__gallery-wrapper">
+
+              <li class="my-works__gallery-item">
+                <input class="my-works__tabs-input" type="radio" name="gallery" id="gallery-1">
+                <label class="my-works__tabs-label my-works__tabs-label--1" for="gallery-1"></label>
+                <div class="my-works__picture-wrapper my-works__picture-wrapper--first">
+                  <img class="my-works__picture my-works__picture--first" src="img/picture1.jpg" alt="картинка из галереи">
+                </div>
+              </li>
+    
+              <li class="my-works__gallery-item my-works__gallery-item--second">
+                <input class="my-works__tabs-input" type="radio" name="gallery" id="gallery-2">
+                <label class="my-works__tabs-label my-works__tabs-label--2" for="gallery-2"></label>
+                <div class="my-works__picture-wrapper my-works__picture-wrapper--second">
+                  <img class="my-works__picture my-works__picture--second" src="img/picture2.jpg" alt="картинка из галереи">
+                </div>
+              </li>
+    
+              <li class="my-works__gallery-item">
+                <input class="my-works__tabs-input" type="radio" name="gallery" id="gallery-3">
+                <label class="my-works__tabs-label my-works__tabs-label--3" for="gallery-3"></label>
+                <div class="my-works__picture-wrapper my-works__picture-wrapper--third">
+                  <img class="my-works__picture my-works__picture--third" src="img/picture4.jpg" alt="картинка из галереи">
+                </div>
+              </li>
+    
+            </ul>
+    
+            <button class="my-works__button">Load more</button>
+    
+          </section>  
+        `,
+        data: {
+        }
+      });
+
+      var about = new Vue({
+        el: '.about-component',
+        template: `
+        <section class="about-me" id="about">
+
+            <div class="about-me__title-wrapper">
+    
+              <h2 class="about-me__title">About me</h2>
+    
+            </div>
+    
+            <div class="about-me__text-wrapper">
+    
+              <p class="about-me__text">Fingerstache green juice semiotics quinoa, truffaut letterpress
+                wolf photo booth ugh biodiesel mumblecore brunch. Meh austin vinyl banh mi, gluten-free
+                chillwave scenester kombucha street art. Before they sold out lumbersexual chillwave,
+                cold-pressed mumblecore beard pickled letterpress normcore crucifix.</p>
+    
+            </div>
+    
+            <div class="about-me__list-wrapper">
+    
+              <ul class="about-me__list">
+                <li class="about-me__item about-me__item--photoshop">
+                  <input class="about-me__tabs-input" type="radio" name="tabs-about" id="about-1">
+                  <label class="about-me__tabs-label about-me__tabs-label--4" for="about-1"></label>
+                  <article class="about-me__item-content about-me__item-content--photoshop">
+                    <h3 class="about-me__item-caption"><span
+                      class="about-me__item-percent">75%</span><br>Photoshop</h3>
+                    <p class="about-me__item-text">
+                      Mustache butcher direct trade, locavore banjo flexitarian taxidermy swag poutine literally.
+                      Selvage bushwick pour-over hella, austin kogi tumblr 90's chartreuse tacos.
+                    </p>
+                  </article>
+                </li>
+    
+                <li class="about-me__item about-me__item--illustrator">
+                  <input class="about-me__tabs-input" type="radio" name="tabs-about" id="about-2">
+                  <label class="about-me__tabs-label about-me__tabs-label--5" for="about-2"></label>
+                  <article class="about-me__item-content about-me__item-content--illustrator">
+                    <h3 class="about-me__item-caption"><span
+                      class="about-me__item-percent">65%</span><br>Illustrator</h3>
+                    <p class="about-me__item-text">
+                      Viral actually PBR&B, portland wayfarers gluten-free pour-over. Pop-up kombucha
+                      chicharrones, YOLO mixtape celiac squid. Heirloom plaid everyday carry mustache.
+                  </p>
+                  </article>
+                </li>
+    
+                <li class="about-me__item about-me__item--knitting">
+                  <input class="about-me__tabs-input" type="radio" name="tabs-about" id="about-3">
+                  <label class="about-me__tabs-label about-me__tabs-label--6" for="about-3"></label>
+                  <article class="about-me__item-content about-me__item-content--knitting">
+                    <h3 class="about-me__item-caption"><span
+                      class="about-me__item-percent">25%</span><br>Knitting</h3>
+                    <p class="about-me__item-text">
+                      Pitchfork distillery next level, polaroid roof party austin fanny pack knausgaard
+                      everyday carry ethical freegan plaid yuccie brunch. Blue bottle wayfarers umami messenger.
+                  </p>
+                  </article>
+                </li>
+    
+              </ul>
+    
+            </div>
+    
+          </section>      
+        `,
+        data: {
+        }
+      });</script><script src="js/popup.js"></script><script src="js/gallery.js"></script></body></html>
