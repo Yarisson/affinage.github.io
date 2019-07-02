@@ -1,0 +1,17 @@
+@media (min-width: 320px) {
+  .page-footer {
+    position: relative;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    background-color: #d2eae3;
+  }
+}
+
+@media (min-width: 1024px) {
+  .page-footer {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+}

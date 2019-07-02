@@ -1,0 +1,31 @@
+{
+  "name": "donut",
+  "version": "1.0.0",
+  "main": "Gulpfile.js",
+  "description": "pink-donut",
+  "devDependencies": {
+    "autoprefixer": "^9.6.0",
+    "browser-sync": "^2.26.7",
+    "gulp": "^4.0.2",
+    "gulp-csso": "^3.0.1",
+    "gulp-htmlmin": "^5.0.1",
+    "gulp-imagemin": "^6.0.0",
+    "gulp-plumber": "^1.2.1",
+    "gulp-postcss": "^8.0.0",
+    "gulp-posthtml": "^3.0.4",
+    "gulp-rename": "^1.4.0",
+    "gulp-sass": "^4.0.2",
+    "posthtml-include": "^1.2.0"
+  },
+  "scripts": {
+    "images": "gulp images",
+    "build": "gulp build",
+    "start": "npm run build && gulp server"
+  },
+  "engines": {
+    "node": ">=5.1.0"
+  },
+  "dependencies": {
+    "del": "^3.0.0"
+  }
+}

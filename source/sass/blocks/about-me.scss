@@ -1,0 +1,515 @@
+@media (min-width: 320px) {
+
+  .about-me__list .about-me__item-content {
+    display: none;
+  }
+
+  .about-me__list .about-me__item > .about-me__tabs-input:checked ~ .about-me__item-content {
+    display: block;
+  }
+
+  .about-me__tabs-input:checked ~ .about-me__item-content--photoshop::before,
+  .about-me__tabs-input:checked ~ .about-me__item-content--illustrator::before,
+  .about-me__tabs-input:checked ~ .about-me__item-content--knitting::before {
+    display: block;
+  }
+
+  .about-me__tabs-input ~ .about-me__item-content--photoshop::before,
+  .about-me__tabs-input ~ .about-me__item-content--illustrator::before,
+  .about-me__tabs-input ~ .about-me__item-content--knitting::before {
+    display: none;
+  }
+
+  .about-me {
+    position: relative;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    background-color: #fef9fd;
+  
+    &__title-wrapper {
+      box-sizing: border-box;
+      width: 100%;
+      padding-top: 48px;
+      padding-right: 20px;
+      padding-bottom: 45px;
+      padding-left: 20px;
+    }
+  
+    &__text-wrapper {
+      box-sizing: border-box;
+      width: 100%;
+      padding-top: 55px;
+      padding-right: 20px;
+      padding-bottom: 39px;
+      padding-left: 20px;
+    }
+  
+    &__list-wrapper {
+      position: relative;
+      box-sizing: border-box;
+      width: 100%;
+      padding-top: 135px;
+      padding-right: 20px;
+      padding-bottom: 60px;
+      padding-left: 20px;
+    }
+  
+    &__list {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      margin-top: 0;
+      margin-bottom: 0;
+      padding: 0;
+      list-style: none;
+    }
+  
+    &__title {
+      width: 100%;
+      margin: 0 auto;
+      text-align: center;
+      font-family: $fonts-navigation;
+      font-weight: 400;
+      font-size: 30px;
+      box-shadow: -2px 60px 0px -32.25px #000000, 44px 77px 0px -32.25px #000000;
+    }
+  
+    &__item {
+      width: 100%;
+      padding-top: 0;
+      padding-bottom: 0;
+    }
+  
+    &__item-content {
+      position: relative;
+      margin: 0;
+      padding-top: 220px;
+      padding-bottom: 35px;
+
+      &--photoshop::before {
+        position: absolute;
+        width: 253px;
+        height: 251px;
+        top: -45px;
+        left: calc(50% - 126.5px);
+        display: block;
+        content: "";
+        background-image: url("../img/icon-photoshop.png");
+        background-repeat: no-repeat;
+        background-color: transparent;
+        background-size: 100%;
+      }
+    
+      &--illustrator::before {
+        position: absolute;
+        width: 232px;
+        height: 255px;
+        top: -45px;
+        left: calc(50% - 116px);
+        display: block;
+        content: "";
+        background-image: url("../img/icon-illustrator.png");
+        background-repeat: no-repeat;
+        background-color: transparent;
+        background-size: 100%;
+      }
+    
+      &--knitting::before {
+        position: absolute;
+        width: 252px;
+        height: 251px;
+        top: -45px;
+        left: calc(50% - 126px);
+        display: block;
+        content: "";
+        background-image: url("../img/icon-knitting.png");
+        background-repeat: no-repeat;
+        background-color: transparent;
+        background-size: 100%;
+      }
+    }
+
+    &__text {
+      margin-top: 0;
+      margin-bottom: 0;
+      text-align: center;
+      font-family: $fonts-main;
+      font-weight: 300;
+      font-size: 12px;
+      line-height: 22px;
+    }
+  
+    &__item-caption {
+      margin-top: 18px;
+      margin-bottom: 18px;
+      text-align: center;
+      font-family: $fonts-navigation;
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 26px;
+    }
+  
+    &__item-percent {
+      text-align: center;
+      font-family: $fonts-navigation;
+      font-weight: 400;
+      font-size: 30px;
+    }
+  
+    &__item-text {
+      margin-top: 0;
+      margin-bottom: 0;
+      text-align: center;
+      font-family: $fonts-main;
+      font-weight: 300;
+      font-size: 12px;
+      line-height: 22px;
+    }
+
+    &__tabs-label {
+      position: absolute;
+      top: -25px;
+      cursor:pointer;
+      display: block;
+      width: 50px;
+      height: 50px;
+      padding: 0;
+      background-color: #d2eae3;
+      border-radius:  50%;
+      box-sizing: border-box;
+      font-size: 14px;
+      text-align: center;
+      padding-top: 15px;
+      padding-bottom: 15px;
+      border: 4px solid #000000;
+
+      &:hover {
+        border-radius: 50%;
+        background-color: #1F7CED;
+      }
+  
+      &:active {
+        border-radius: 50%;
+        background-color: #1F7CED;
+        opacity: 0.5;
+      }
+
+      &--4 {
+        left: calc(25% - 29px);
+      }
+
+      &--5 {
+        left: calc(50% - 29px);
+      }
+
+      &--6 {
+        left: calc(75% - 29px);
+      }
+    }
+
+    &__tabs-input {
+      display: none;
+      &:checked + label {
+      background-color: #e74c3c;
+      color:#fefefe;
+      }
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  .about-me__list .about-me__item-content {
+    display: block;
+  }
+  
+  .about-me__tabs-input ~ .about-me__item-content--photoshop::before,
+  .about-me__tabs-input ~ .about-me__item-content--illustrator::before,
+  .about-me__tabs-input ~ .about-me__item-content--knitting::before {
+    display: block;
+  }
+
+  .about-me {
+  
+    &::before {
+      position: absolute;
+      width: 5px;
+      height: 156px;
+      top: 9px;
+      right: calc(75% - 2.5px);
+      display: block;
+      content: "";
+      background-image: url("../img/line.svg");
+      background-repeat: no-repeat;
+      background-color: transparent;
+      background-size: 100%;
+    }
+  
+    &::after {
+      position: absolute;
+      width: 32px;
+      height: 59px;
+      top: 73px;
+      right: calc(75% - 16px);
+      display: block;
+      content: "";
+      background-image: url("../img/line-ellipse.svg");
+      background-repeat: no-repeat;
+      background-color: transparent;
+      background-size: 100%;
+    }
+
+    &__title-wrapper {
+      padding-top: 80px;
+    }
+  
+    &__list {
+      flex-direction: row;
+      flex-wrap: wrap;
+    }
+  
+    &__title {
+      width: 290px;
+      margin-right: 40px;
+      font-size: 40px;
+      box-shadow: -4px 35px 0px -20.25px #000000, 26px 47px 0px -20.25px #000000;
+    }
+  
+    &__item {
+      display: block;
+      width: 50%;
+      padding: 0;
+    }
+  
+    &__item-content {
+      display: block;
+      width: 100%;
+      margin: 0;
+      padding-top: 200px;
+      padding-bottom: 80px;
+
+      &--photoshop::before {
+        top: -60px;
+      }
+    
+      &--illustrator::before {
+        top: -60px;
+      }
+    
+      &--knitting::before {
+        top: -62px;
+      }
+    }
+
+    &__text {
+      font-size: 14px;
+      line-height: 24px;
+    }
+  
+    &__item-caption {
+      margin-top: 22px;
+      font-size: 16px;
+      line-height: 28px;
+    }
+  
+    &__item-percent {
+      font-size: 40px;
+    }
+  
+    &__item-text {
+      font-size: 14px;
+      line-height: 24px;
+    }
+
+    &__tabs-label {
+      display: none;
+    }
+  }
+}
+
+@media (min-width: 1024px) {
+  .about-me {
+    flex-direction: row;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+  
+    &::before {
+      top: 27px;
+      right: calc(50% - 2.5px);
+    }
+  
+    &::after {
+      top: 91px;
+      right: calc(50% - 16px);
+    }
+  
+    &__title-wrapper {
+      width: 50%;
+      padding-top: 48px;
+      padding-right: 4.47%;
+      padding-bottom: 100px;
+      padding-left: 4.15%;
+    }
+  
+    &__text-wrapper {
+      width: 50%;
+      padding-right: 4.15%;
+      padding-bottom: 104px;
+      padding-left: 4.2%;
+    }
+  
+    &__list-wrapper {
+      padding-top: 292px;
+      padding-right: 4.0%;
+      padding-bottom: 100px;
+      padding-left: 4.0%;
+    }
+  
+    &__list {
+      justify-content: space-between;
+    }
+  
+    &__title {
+      width: 100%;
+      margin: 0 auto;
+      font-size: 63px;
+      box-shadow: -2px 60px 0px -32.25px #000000, 44px 77px 0px -32.25px #000000;
+    }
+  
+    &__item {
+      width: 30%;
+      padding: 0;
+    }
+  
+    &__item-content {
+      padding-top: 0;
+      padding-bottom: 0;
+
+      &--photoshop::before {
+        top: -288px;
+      }
+    
+      &--illustrator::before {
+        top: -290px;
+      }
+    
+      &--knitting::before {
+        top: -290px;
+      }
+    }
+
+    &__text {
+      text-align: left;
+    }
+
+    &__item-caption {
+      margin-top: 18px;
+      margin-bottom: 38px;
+      font-size: 18px;
+      line-height: 30px;
+    }
+  
+    &__item-percent {
+      font-size: 48px;
+    }
+  
+    &__item-text {
+      line-height: 22px;
+    }
+  }
+}
+
+@media (min-width: 1600px) {
+  .about-me {
+  
+    &::before {
+      height: 225px;
+      top: 85px;
+    }
+  
+    &::after {
+      top: 230px;
+    }
+  
+    &__title-wrapper {
+      padding-top: 177px;
+      padding-bottom: 150px;
+      padding-left: 15.75%;
+    }
+  
+    &__text-wrapper {
+      padding-top: 193px;
+      padding-right: 10.8%;
+    }
+  
+    &__list-wrapper {
+      padding-right: 10.78%;
+      padding-left: 10.78%;
+    }
+  
+    &__title {
+      font-size: 76.62px;
+      box-shadow: -2px 71px 0px -41.25px #000000, 44px 81px 0px -41.25px #000000;
+    }
+  
+    &__text {
+      font-size: 18px;
+      line-height: 29px;
+    }
+  
+    &__item-text {
+      font-size: 16px;
+      line-height: 23px;
+    }
+
+    &__item-content {
+
+      &--photoshop::before {
+        top: -280px;
+      }
+    
+      &--illustrator::before {
+        top: -281px;
+      }
+    
+      &--knitting::before {
+        top: -280px;
+      }
+    }
+  }
+}
+
+@media (min-width: 1900px) {
+  .about-me {
+  
+    &::before {
+      right: 49.8%;
+    }
+  
+    &::after {
+      right: 49.1%;
+    }
+  
+    &__title-wrapper {
+      padding-right: 85px;
+      padding-left: 300px;
+    }
+  
+    &__text-wrapper {
+      padding-right: 205px;
+      padding-left: 80px;
+    }
+  
+    &__list-wrapper {
+      padding-right: 205px;
+      padding-left: 205px;
+    }
+  
+    &__item-content {
+      padding-top: 0;
+      padding-bottom: 0;
+    }
+  }  
+}

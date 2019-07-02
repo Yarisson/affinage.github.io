@@ -1,0 +1,28 @@
+@font-face {
+  font-family: "Open Sans";
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+  
+  src: local("Open Sans Regular"),
+  url("../fonts/OpenSans-Regular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Open Sans";
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+  
+  src: local("Open Sans Light"),
+  url("../fonts/OpenSans-Light.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Big John";
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;  
+  src: local("Big John"),
+  url("../fonts/BIG-JOHN.otf") format("opentype");
+}
